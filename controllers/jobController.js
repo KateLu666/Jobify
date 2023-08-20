@@ -17,14 +17,8 @@ export const getAllJobs = async (req, res) => {
 
 // CREATE JOB
 export const createJob = async (req, res) => {
-  const { company, position, jobLocation, jobStatus, jobType } = req.body;
-  const job = await Job.create({
-    company,
-    position,
-    jobLocation,
-    jobStatus,
-    jobType,
-  });
+  req.body.createdBy = req.user.userId;
+  const job = await Job.create(req.body);
   res.status(StatusCodes.CREATED).json({ job });
 };
 
