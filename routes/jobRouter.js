@@ -11,7 +11,13 @@ import {
 
 // router.get('/',getAllJobs);
 
-router.route("/").get(getAllJobs).post(createJob);
-router.route("/:id").get(getJob).patch(updateJob).delete(deleteJob);
+import { validateJobInput } from "../middleware/validationMiddleware.js";
+
+router.route("/").get(getAllJobs).post(validateJobInput, createJob);
+router
+  .route("/:id")
+  .get(getJob)
+  .patch(validateJobInput, updateJob)
+  .delete(deleteJob);
 
 export default router;
