@@ -71,7 +71,7 @@ export const validateRegisterInput = withValidationErrors([
     .isLength({ min: 8 })
     .withMessage("password must be at least 8 characters long"),
   body("lastName").notEmpty().withMessage("last name is required"),
-  body("location").notEmpty().withMessage("location is required"),
+  // body("location").notEmpty().withMessage("location is required"),
 ]);
 
 export const validateLoginInput = withValidationErrors([
