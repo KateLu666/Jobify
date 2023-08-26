@@ -7,15 +7,15 @@ export const action = async ({ params }) => {
   try {
     await customFetch.delete(`/jobs/${params.id}`),
       toast.success("Job Deleted Successfully");
+    return redirect("/dashboard/all-jobs");
   } catch (error) {
     toast.error(error?.response?.data?.msg);
-    return error;
+    return redirect("/dashboard/all-jobs");
   }
-  return redirect("/dashboard/all-jobs");
 };
 
 const DeleteJob = () => {
-  return <h1>DeleteJob Page</h1>;
+  return null;
 };
 
 export default DeleteJob;
