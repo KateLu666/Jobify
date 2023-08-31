@@ -29,8 +29,7 @@ cloudinary.config({
 });
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-app.use(express.static(path.resolve(__dirname, "./client/dist/")));
-
+app.use(express.static(path.resolve(__dirname, "./client/dist")));
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
