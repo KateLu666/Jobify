@@ -16,12 +16,12 @@ const Landing = () => {
             Job <span>tracking</span> App
           </h1>
           <p>
-            Introducing Jobify - your go-to job searching website. Find your
-            dream job or top talent with ease on Jobify. Our user-friendly
-            interface and innovative search features make discovering the
-            perfect job or candidate a breeze. Browse through a vast collection
-            of listings, tailored to diverse industries and locations. Simplify
-            your job search or hiring process with Jobify today!
+            Are you on the hunt for your dream job? Look no further than Jobify!
+            Our innovative job tracking application is designed with your career
+            aspirations in mind. With Jobify, you can effortlessly manage your
+            job search journey. Track applications, location, and interviews all
+            in one place. Stay organized, stay focused, and land that perfect
+            job with Jobify by your side.
           </p>
           <Link to="/register" className="btn register-link">
             Register
